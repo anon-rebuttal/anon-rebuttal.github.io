@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Position: Fairness Failure in Generative Models is an Evaluation Problem — Anonymous Rebuttal Page">
+  <meta name="keywords" content="fairness, generative models, evaluation, LLM, fairness cards">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Position: Fairness Failure in Generative Models is an Evaluation Problem</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+</head>
+
+<body>
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Position: Fairness Failure in Generative Models is an Evaluation Problem</h1>
+          <h1 style="font-size:1.8rem">Additional material for rebuttal</h1>
+          <br>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Anonymous Authors</span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Anonymous Affiliations</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-widescreen">
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="comparison-table-wrap">
+          <p class="comparison-table-caption">
+            <b>Table 1.</b> Comparison of existing documentation frameworks with the proposed Fairness Cards. Each row highlights a dimension of evaluation transparency; columns represent frameworks ordered chronologically. Fairness Cards uniquely mandate structured subgroup reporting, prompt-family disclosure, decoding/seed variance analysis, and refusal-rate tracking as first-class fairness outcomes.
+          </p>
+          <div class="table-container">
+            <table class="table is-bordered is-hoverable is-fullwidth comparison-table">
+              <thead>
+                <tr>
+                  <th class="comparison-table__dim-col">Dimension</th>
+                  <th>Model Cards<br><span class="comparison-table__cite">(Mitchell et al., 2019)</span></th>
+                  <th>Datasheets / Data Statements<br><span class="comparison-table__cite">(Gebru et al., 2021; Bender &amp; Friedman, 2018)</span></th>
+                  <th>AI FactSheets<br><span class="comparison-table__cite">(Arnold et al., 2019)</span></th>
+                  <th>Reproducibility / Benchmark Standards<br><span class="comparison-table__cite">(Pineau et al., 2021)</span></th>
+                  <th class="comparison-table__ours-col">Fairness Cards<br><span class="comparison-table__cite">(Proposed)</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="comparison-table__dim-col">Primary object documented</td>
+                  <td>Trained model</td>
+                  <td>Dataset</td>
+                  <td>System / process</td>
+                  <td>Experimental setup</td>
+                  <td class="comparison-table__ours-col">Evaluation protocol for model or system</td>
+                </tr>
+                <tr>
+                  <td class="comparison-table__dim-col">Primary goal</td>
+                  <td>Contextualize model performance</td>
+                  <td>Document data provenance &amp; bias</td>
+                  <td>Risk &amp; compliance documentation</td>
+                  <td>Reduce hidden experimental degrees of freedom</td>
+                  <td class="comparison-table__ours-col">Stabilize and make fairness claims comparable</td>
+                </tr>
+                <tr>
+                  <td class="comparison-table__dim-col">Fairness scope</td>
+                  <td>Encouraged but general</td>
+                  <td>Dataset bias description</td>
+                  <td>High-level risk framing</td>
+                  <td>Optional subgroup metrics</td>
+                  <td class="comparison-table__ours-col">Structured fairness evaluation disclosure</td>
+                </tr>
+                <tr>
+                  <td class="comparison-table__dim-col">Subgroup / slice reporting</td>
+                  <td>Recommended</td>
+                  <td>Dataset demographics</td>
+                  <td>High-level</td>
+                  <td>Optional</td>
+                  <td class="comparison-table__ours-col">Required + slice-level outcomes</td>
+                </tr>
+                <tr>
+                  <td class="comparison-table__dim-col">Prompt-family disclosure</td>
+                  <td>Not required</td>
+                  <td>N/A</td>
+                  <td>Not required</td>
+                  <td>Typically absent</td>
+                  <td class="comparison-table__ours-col">Explicit prompt families/templates required</td>
+                </tr>
+                <tr>
+                  <td class="comparison-table__dim-col">Decoding / seed variance reporting</td>
+                  <td>Rare</td>
+                  <td>N/A</td>
+                  <td>Not required</td>
+                  <td>Hyperparameters reported, not fairness sensitivity</td>
+                  <td class="comparison-table__ours-col">Decoding settings + seed/robustness reporting required</td>
+                </tr>
+                <tr>
+                  <td class="comparison-table__dim-col">Refusal / access harms</td>
+                  <td>Rarely addressed</td>
+                  <td>N/A</td>
+                  <td>Possible at high level</td>
+                  <td>Not addressed</td>
+                  <td class="comparison-table__ours-col">Refusal/deflection rates treated as fairness outcomes</td>
+                </tr>
+                <tr>
+                  <td class="comparison-table__dim-col">Scorer / annotation pipeline disclosure</td>
+                  <td>Limited</td>
+                  <td>Limited</td>
+                  <td>Limited</td>
+                  <td>Minimal</td>
+                  <td class="comparison-table__ours-col">Scorer models, annotator pools, rubrics, thresholds disclosed</td>
+                </tr>
+                <tr>
+                  <td class="comparison-table__dim-col">Intersectional / counterfactual protocols</td>
+                  <td>Optional</td>
+                  <td>Optional</td>
+                  <td>Not standardized</td>
+                  <td>Not standardized</td>
+                  <td class="comparison-table__ours-col">Structured slice definitions + minimal-pair protocols where applicable</td>
+                </tr>
+                <tr>
+                  <td class="comparison-table__dim-col">Versioning / longitudinal comparability</td>
+                  <td>Limited</td>
+                  <td>Dataset-level</td>
+                  <td>Process-level</td>
+                  <td>Partial</td>
+                  <td class="comparison-table__ours-col">Versioned prompt families + evaluation dates for cross-version tracking</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website was built on top of the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies template</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
