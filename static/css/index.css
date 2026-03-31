@@ -142,3 +142,74 @@ figure {
     white-space: normal;
   }
 }
+
+/* ── Data tables (numeric result tables) ── */
+
+.data-table-wrap {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 2.5rem;
+}
+
+.data-table-caption {
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: #363636;
+  margin-bottom: 1.2rem;
+  text-align: justify;
+}
+
+.data-table {
+  font-size: 0.84rem;
+  line-height: 1.4;
+  border-collapse: collapse;
+}
+
+.data-table thead th {
+  background: #f0f4fa;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: bottom;
+  font-size: 0.82rem;
+  padding: 0.7rem 0.55rem;
+  border-bottom: 2px solid #3273dc;
+  color: #222;
+  white-space: nowrap;
+}
+
+.data-table tbody td {
+  vertical-align: middle;
+  padding: 0.5rem 0.55rem;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.data-table tbody td:first-child {
+  text-align: left;
+  font-weight: 600;
+  background: #f8f9fb;
+  white-space: nowrap;
+}
+
+.data-table tbody tr:hover td {
+  background: #f5f8fd;
+}
+
+.data-table tbody tr:hover td:first-child {
+  background: #eef1f6;
+}
+
+@media screen and (max-width: 1023px) {
+  .data-table {
+    font-size: 0.75rem;
+  }
+
+  .data-table thead th {
+    font-size: 0.75rem;
+    padding: 0.5rem 0.35rem;
+  }
+
+  .data-table tbody td {
+    padding: 0.4rem 0.35rem;
+  }
+}
