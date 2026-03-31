@@ -168,8 +168,12 @@ figure {
   line-height: 1.35;
   border-collapse: collapse;
   width: 100%;
-  table-layout: auto;
+  table-layout: fixed;
   max-width: 100%;
+}
+
+.data-table thead th:first-child {
+  width: 10rem;
 }
 
 .data-table thead th {
@@ -198,7 +202,6 @@ figure {
   font-weight: 600;
   background: #f8f9fb;
   white-space: nowrap;
-  min-width: 8rem;
 }
 
 .data-table tbody tr:hover td {
@@ -209,12 +212,15 @@ figure {
   background: #eef1f6;
 }
 
+.data-table--uniform thead th:first-child {
+  width: auto;
+}
+
 .data-table--uniform tbody td:first-child {
   text-align: right;
   font-weight: normal;
   background: none;
   white-space: normal;
-  width: auto;
 }
 
 .data-table--uniform tbody tr:hover td:first-child {
