@@ -172,10 +172,6 @@ figure {
   max-width: 100%;
 }
 
-.data-table thead th:first-child {
-  width: 10rem;
-}
-
 .data-table thead th {
   background: #f0f4fa;
   font-weight: 700;
@@ -188,6 +184,10 @@ figure {
   white-space: normal;
   word-wrap: break-word;
   overflow-wrap: break-word;
+}
+
+.data-table thead th:first-child {
+  width: 10rem !important;
 }
 
 .data-table tbody td {
@@ -213,7 +213,7 @@ figure {
 }
 
 .data-table--uniform thead th:first-child {
-  width: auto;
+  width: auto !important;
 }
 
 .data-table--uniform tbody td:first-child {
