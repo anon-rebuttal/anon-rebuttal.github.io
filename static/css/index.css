@@ -152,7 +152,8 @@ figure {
 }
 
 .data-table-wrap .table-container {
-  overflow-x: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .data-table-caption {
@@ -186,9 +187,6 @@ figure {
   overflow-wrap: break-word;
 }
 
-.data-table thead th:first-child {
-  width: 10rem !important;
-}
 
 .data-table tbody td {
   vertical-align: middle;
@@ -212,9 +210,6 @@ figure {
   background: #eef1f6;
 }
 
-.data-table--uniform thead th:first-child {
-  width: auto !important;
-}
 
 .data-table--uniform tbody td:first-child {
   text-align: right;
@@ -229,15 +224,18 @@ figure {
 
 @media screen and (max-width: 1023px) {
   .data-table {
-    font-size: 0.75rem;
+    font-size: 0.72rem;
+    table-layout: auto;
+    min-width: 700px;
   }
 
   .data-table thead th {
-    font-size: 0.75rem;
-    padding: 0.5rem 0.35rem;
+    font-size: 0.70rem;
+    padding: 0.4rem 0.3rem;
+    white-space: nowrap;
   }
 
   .data-table tbody td {
-    padding: 0.4rem 0.35rem;
+    padding: 0.35rem 0.3rem;
   }
 }
