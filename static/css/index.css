@@ -193,6 +193,7 @@ figure {
   font-weight: 600;
   background: #f8f9fb;
   white-space: nowrap;
+  width: 12%;
 }
 
 .data-table tbody tr:hover td {
@@ -201,6 +202,18 @@ figure {
 
 .data-table tbody tr:hover td:first-child {
   background: #eef1f6;
+}
+
+.data-table--uniform tbody td:first-child {
+  text-align: right;
+  font-weight: normal;
+  background: none;
+  white-space: normal;
+  width: auto;
+}
+
+.data-table--uniform tbody tr:hover td:first-child {
+  background: #f5f8fd;
 }
 
 @media screen and (max-width: 1023px) {
