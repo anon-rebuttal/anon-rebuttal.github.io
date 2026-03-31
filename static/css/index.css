@@ -226,7 +226,8 @@ figure {
   .data-table {
     font-size: 0.72rem;
     table-layout: auto;
-    min-width: 700px;
+    width: auto;
+    min-width: 1100px;
   }
 
   .data-table thead th {
@@ -237,5 +238,6 @@ figure {
 
   .data-table tbody td {
     padding: 0.35rem 0.3rem;
+    white-space: nowrap;
   }
 }
