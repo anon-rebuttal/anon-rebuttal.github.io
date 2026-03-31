@@ -160,9 +160,11 @@ figure {
 }
 
 .data-table {
-  font-size: 0.84rem;
-  line-height: 1.4;
+  font-size: 0.78rem;
+  line-height: 1.35;
   border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
 }
 
 .data-table thead th {
@@ -170,16 +172,18 @@ figure {
   font-weight: 700;
   text-align: center;
   vertical-align: bottom;
-  font-size: 0.82rem;
-  padding: 0.7rem 0.55rem;
+  font-size: 0.74rem;
+  padding: 0.5rem 0.35rem;
   border-bottom: 2px solid #3273dc;
   color: #222;
-  min-width: 5.5rem;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .data-table tbody td {
   vertical-align: middle;
-  padding: 0.5rem 0.55rem;
+  padding: 0.35rem 0.35rem;
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
