@@ -151,6 +151,10 @@ figure {
   margin-bottom: 2.5rem;
 }
 
+.data-table-wrap .table-container {
+  overflow-x: hidden;
+}
+
 .data-table-caption {
   font-size: 1.05rem;
   line-height: 1.55;
@@ -164,7 +168,8 @@ figure {
   line-height: 1.35;
   border-collapse: collapse;
   width: 100%;
-  table-layout: fixed;
+  table-layout: auto;
+  max-width: 100%;
 }
 
 .data-table thead th {
@@ -193,7 +198,7 @@ figure {
   font-weight: 600;
   background: #f8f9fb;
   white-space: nowrap;
-  width: 12%;
+  min-width: 8rem;
 }
 
 .data-table tbody tr:hover td {
